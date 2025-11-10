@@ -13,13 +13,13 @@ export function ConversorDivisa() {
     useEffect( ()=>{
         const llamadoAPICambio=async()=>{
             try {
-                const respuesta= await fetch("https://api.frankfurter.dev/v1/2024-01-01..?symbols=USD");
+                const respuesta= await fetch("https://v6.exchangerate-api.com/v6/f0f3011fcc467fec7e0844e6/latest/USD");
                 const datos = await respuesta.json();
 
                 console.log(datos);
 
 
-                setValorCambio(datos.rates.USD)
+                setValorCambio(datos.conversion_rates.HNL)
             } catch (error) {
                 console.error("Error al acceder a la API: ", error);
             }
@@ -50,7 +50,7 @@ export function ConversorDivisa() {
     
     return (
         <div className="conversor">
-            <h2>TASA DE CAMBIO DÓLAR A LEMPIRA: <br /> {valorCambio} </h2>
+            <h2>TASA DE CAMBIO DÓLAR A LEMPIRA: <br /> {valorCambio} HNL </h2>
             <h2>Conversor de Dólares a Lempiras</h2>
             <input type="text" placeholder="Ingrese la Cantidad de Dólares a Convertir" ref={dolarRef} /><br/><br/>
             <button onClick={conversorMoneda}>Convertir</button> 
