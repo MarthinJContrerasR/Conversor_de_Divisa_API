@@ -57,3 +57,38 @@
   font-weight: bold;
   font-size: 1.5rem;
 }
+
+.cargando-animacion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #666;
+    font-style: italic;
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.cursor {
+    animation: blink 1s infinite;
+    color: #28a745;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
