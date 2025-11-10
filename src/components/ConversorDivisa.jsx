@@ -81,7 +81,7 @@ export function ConversorDivisa() {
         <div className="conversor">
             <h2>TASA DE CAMBIO DÓLAR A LEMPIRA: <br /> {valorCambio} HNL </h2>
             <h2>Conversor de Dólares a Lempiras</h2>
-            <input type="text" placeholder="Ingrese la Cantidad de Dólares a Convertir" ref={dolarRef} /><br/><br/>
+            <input type="text" placeholder="Ingrese la Cantidad de Dólares" ref={dolarRef} /><br/><br/>
             <button onClick={conversorMoneda}>Convertir</button> 
             <button onClick={limpiarCampos}>Limpiar</button> <br/><br />
             
